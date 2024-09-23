@@ -9,5 +9,5 @@ function fibonacci(n, result = [0, 1]) {
   return result;
 }
 
-// Jangan hapus kode di bawah ini!
+// Jangan hapus kode di bawah ini!!
 export default fibonacci;
