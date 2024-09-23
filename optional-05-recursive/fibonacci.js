@@ -1,11 +1,10 @@
-function fibonacci(n) {
-  const result = [0];
-  if (n === 0) {
-    return result;
+function fibonacci(n, result = [0, 1]) {
+  if (n <= 1) {
+    return result.slice(0, n + 1);
   }
-  result.push(1);
-  for (let i = 2; i <= n; i++) {
-    result.push(result[i - 1] + result[i - 2]);
+  if (result.length - 1 < n) {
+    result.push(result[result.length - 1] + result[result.length - 2]);
+    return fibonacci(n, result);
   }
   return result;
 }
